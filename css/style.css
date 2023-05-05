@@ -25,16 +25,37 @@ body{
                          "pie pie pie pie";
 }
 
+.contenedor-catalogo{ /* Mquetado catalogo.html */
+    width: 95%;
+    max-width: 1500px;
+    margin: 15px auto;
+    display: grid;
+    gap: 15px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+                         "navegador navegador navegador navegador"
+                         "catalogo catalogo catalogo catalogo"
+                         "pie pie pie pie";
+}
+
 .contenedor .encabezado,
 .contenedor .navegador,
 .contenedor .side,
 .contenedor .carrusel,
-.contenedor .pie {
+.contenedor .pie,
+.contenedor-catalogo .encabezado,
+.contenedor-catalogo .navegador,
+.contenedor-catalogo .catalogo,
+.contenedor-catalogo .pie{
     padding: 20px;
     border-radius: 4px;
 }
 
-.contenedor .encabezado{
+.contenedor .encabezado,
+.contenedor-catalogo .encabezado{
     background: darkblue;
     color: #fff;
     grid-area: encabezado;
@@ -44,7 +65,8 @@ body{
     height: 8rem;
     display: flex;
 }
-.contenedor .navegador{
+.contenedor .navegador,
+.contenedor-catalogo .navegador{
     /* background: darkblue; */
     color: #fff;
     grid-area: navegador;
@@ -83,8 +105,6 @@ body{
     background-color: cornflowerblue;
 }
 
-
-
 .contenedor .carrusel{
     /* background-color: navy; */
     grid-area: carrusel;
@@ -107,7 +127,8 @@ body{
     justify-content: center;
     text-align: center;
 }
-.contenedor .pie{
+.contenedor .pie,
+.contenedor-catalogo .pie{
     background: darkblue;
     color: #fff;
     grid-area: pie;
@@ -117,6 +138,21 @@ body{
     justify-content: center;
 }
 
+.contenedor-catalogo .catalogo{
+    /* background-color: navy; */
+    grid-area: catalogo;
+    /* height: 25rem; */
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
 .link{
     display: inline-flex;
     margin: 0px 10px 0px 10px;
@@ -124,6 +160,52 @@ body{
 
 .link:hover{
     color: white;
+}
+
+/* Cards */
+
+.catalogo .card{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    width: 280px;
+    height:350px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.catalogo .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.catalogo .card img{
+    width: 150px;
+    height: 200px;
+}
+
+.catalogo .card h4{
+    font-weight: 600;
+}
+
+.catalogo .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.catalogo .card a{
+    font-weight: 700;
+    text-decoration: none;
+    color: darkcyan;
 }
 
 @media screen and (max-width: 768px){
@@ -136,6 +218,14 @@ body{
                              "pie pie pie pie";
     }
 
+    .contenedor-catalogo{
+        width: 100%;
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+                             "navegador navegador navegador navegador"
+                             "catalogo catalogo catalogo catalogo"
+                             "pie pie pie pie";
+    }
+
     .navegador li{
         width: 100%;
         margin-top: 1px;
@@ -145,13 +235,20 @@ body{
 @media screen and (max-width: 450px){
     .contenedor{
         width: 100%;
-        grid-template-areas: "encabezado encabezado encabezado"
-                             "navegador navegador navegador"
-                             "side side side"
-                             "carrusel carrusel carrusel"
-                             "pie pie pie";
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+                             "navegador navegador navegador navegador"
+                             "side side side side"
+                             "carrusel carrusel carrusel carrusel"
+                             "pie pie pie pie";
     }
 
+    .contenedor-catalogo{
+        width: 100%;
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+                             "navegador navegador navegador navegador"
+                             "catalogo catalogo catalogo catalogo"
+                             "pie pie pie pie";
+    }
     .navegador li{
         width: 100%;
         margin-top: 1px;
