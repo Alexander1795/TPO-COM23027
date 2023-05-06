@@ -258,3 +258,11 @@ body{
         height: 2rem;
     }
 }
+
+/* Formulario */
+textarea {
+    height: 200px;
+    width: 100%;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+  } 
