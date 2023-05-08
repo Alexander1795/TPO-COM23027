@@ -64,6 +64,17 @@ body{
     height: 8rem;
     display: flex;
 }
+.contenedor .gradiante,
+.contenedor-catalogo .gradiante,
+.contenedor-contacto .gradiante{
+    /* background: darkblue; */
+    color: #fff;
+    grid-area: navegador;
+    /* box-sizing: border-box; */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+}
 .contenedor .navegador,
 .contenedor-catalogo .navegador{
     /* background: darkblue; */
@@ -87,9 +98,10 @@ body{
 }
 .navegador a{
     width: 100%;
-    /* background-color: black; */
+    color: black;
 
 }
+
 .navegador li{
     background-color: #ffde00;
     padding: 1rem;
@@ -99,11 +111,43 @@ body{
     display: flex;
 }
 
-.navegador li:hover{
-    color: black;
-    background-color: #69D2E7;
-}
 
+                        /* efecto gradiante al pisar el elemento */
+.gradiante li:hover{            
+    --borderWidth: 3px;
+    color: black;
+    background: #2585b9ad;
+    position: relative;
+    border-radius: var(--borderWidth);
+
+}
+.gradiante li::after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #110a09, #01bff9, #1c0720, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+/* efecto animacion */
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .contenedor .carrusel{
     /* background-color: navy; */
     grid-area: carrusel;
