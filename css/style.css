@@ -250,6 +250,27 @@ body{
     text-decoration: none;
     color: darkcyan;
 }
+/* Menu hamburguesa */
+
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    width: 100%;
+    background: #ffde00;
+    color: #000000;
+}
+.abrir-menu:hover, .cerrar-menu:hover {
+    color: black;
+    background: #2585b9ad;
+}
+
+.abrir-menu.invisible {
+    display: none;
+}
 
 @media screen and (max-width: 768px){
     .contenedor{
@@ -272,6 +293,19 @@ body{
     .navegador li{
         width: 100%;
         margin-top: 1px;
+    }
+    /* Menu hamburguesa */
+    .navegador{
+        display: none;
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+    }
+
+    .navegador.visible {
+        display: block;
     }
 }
 
@@ -299,6 +333,19 @@ body{
 
     .side{
         height: 2rem;
+    }
+    /* Menu hamburguesa */
+    .navegador{
+        display: none;
+    }
+    
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+    }
+
+    .navegador.visible {
+        display: block;
     }
 }
 
