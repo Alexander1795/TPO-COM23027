@@ -165,11 +165,24 @@ body{
     background: #ffde00;
     color: #000000;
     grid-area: side; 
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-sizing: border-box;
 }
+
+.side div{
+    border: 1px solid black;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+
 .contenedor .pie,
 .contenedor-catalogo .pie{
     background: #ffde00;
@@ -277,8 +290,8 @@ body{
         width: 100%;
         grid-template-areas: "encabezado encabezado encabezado encabezado"
                              "navegador navegador navegador navegador"
-                             "carrusel carrusel carrusel side"
-                             "carrusel carrusel carrusel side"
+                             "side side side side"
+                             "carrusel carrusel carrusel carrusel"
                              "pie pie pie pie";
     }
 
@@ -288,6 +301,10 @@ body{
                              "navegador navegador navegador navegador"
                              "catalogo catalogo catalogo catalogo"
                              "pie pie pie pie";
+    }
+
+    .side h4{
+        font-size: 1rem;
     }
 
     .navegador li{
@@ -331,8 +348,8 @@ body{
         margin-top: 1px;
     }
 
-    .side{
-        height: 2rem;
+    .side h4{
+        font-size: 1rem;
     }
     /* Menu hamburguesa */
     .navegador{
@@ -359,4 +376,4 @@ textarea {
     width: 100%;
     padding: 5px;
     font-family: 'Roboto', sans-serif;
-  } 
+}

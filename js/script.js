@@ -14,19 +14,33 @@ cerrar.addEventListener("click", () => {
     abrir.classList.toggle("invisible")
 })
 
-fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
-			.then(response => response.json()) // Convertir la respuesta a JSON
-			.then(data => {
-				// Procesar los datos
-				const valores = data.filter(item => item.casa.nombre.includes('Dolar'));
+// Agregamos las cards x20 manipulando DOM
+// const originalCard = document.querySelector('.card');
+// const catalogoSection = document.querySelector('.catalogo');
 
-				// Mostrar los valores en la tabla
-				const table = document.getElementById('valores-table');
-				valores.forEach(item => {
-					const row = table.insertRow();
-					row.insertCell(0).innerHTML = item.casa.nombre;
-					row.insertCell(1).innerHTML = item.casa.compra;
-					row.insertCell(2).innerHTML = item.casa.venta;
-				});
-			})
-			.catch(error => console.error(error));
+// for (let i = 0; i < 19; i++) {
+//     const clonedCard = originalCard.cloneNode(true);
+//     catalogoSection.appendChild(clonedCard);
+// }
+
+
+//Consumimos api DolarSi
+fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+  .then(response => response.json())
+  .then(data => {
+    const valores = [data[0], data[1], data[4]];
+    const oficial = document.getElementById('dlr-oficial');
+    const blue = document.getElementById('dlr-blue');
+    const bolsa = document.getElementById('dlr-bolsa');
+
+    valores.forEach(item => {
+      if (item.casa.nombre === 'Dolar Oficial') {
+        oficial.innerHTML = `<h4>Dolar Oficial</h4><p>Compra: ${item.casa.compra} | Venta: ${item.casa.venta}</p>`;
+      } else if (item.casa.nombre === 'Dolar Blue') {
+        blue.innerHTML = `<h4>Dolar Blue</h4><p>Compra: ${item.casa.compra} | Venta: ${item.casa.venta}</p>`;
+      } else if (item.casa.nombre === 'Dolar Bolsa') {
+        bolsa.innerHTML = `<h4>Dolar Bolsa</h4><p>Compra: ${item.casa.compra} | Venta: ${item.casa.venta}</p>`;
+      }
+    });
+  })
+  .catch(error => console.error(error));
