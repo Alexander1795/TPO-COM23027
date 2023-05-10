@@ -1,0 +1,2 @@
+Proporciona un tiempo de respuesta rápido de 1 ms GTG, optimiza los colores y el brillo de la pantalla.
+Tasa de refresco de 170 Hz: responde más rápido con fotogramas más fluidos.

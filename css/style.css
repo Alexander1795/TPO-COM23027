@@ -75,6 +75,11 @@ body{
     flex-wrap: wrap;
     padding: 0px;
 }
+.btn {
+    background-color: #ffde00;
+    color: #000000;
+}
+
 .contenedor .navegador,
 .contenedor-catalogo .navegador{
     /* background: darkblue; */
@@ -116,7 +121,7 @@ body{
 .gradiante li:hover{            
     --borderWidth: 3px;
     color: black;
-    background: #2585b9ad;
+    background: #ffde00;
     position: relative;
     border-radius: var(--borderWidth);
 
@@ -149,7 +154,7 @@ body{
     }
 }
 .contenedor .carrusel{
-    background-color: navy;
+    /* background-color: navy; */
     grid-area: carrusel;
     /* height: 25rem;
     color: #fff;*/
@@ -159,6 +164,7 @@ body{
     text-align: center; */
     padding: 0;
     box-sizing: border-box;
+    image-rendering: auto;
 }
   
 .carousel,

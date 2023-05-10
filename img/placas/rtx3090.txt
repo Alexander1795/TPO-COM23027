@@ -1,0 +1,5 @@
+GeForce RTX™ 3090 con desempeño de clase TITAN.
+La segunda generación de RTX de NVIDIA, que redobla la apuesta en trazado de rayos y desempeño de IA con los RT Cores y Tensor Cores mejorados,
+más los nuevos multiprocesadores de streaming. Además, cuenta con una impresionante memoria G6X de 24 GB,
+todo para ofrecer la máxima experiencia de juego.
+
