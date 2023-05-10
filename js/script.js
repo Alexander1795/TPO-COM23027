@@ -35,11 +35,17 @@ fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
 
     valores.forEach(item => {
       if (item.casa.nombre === 'Dolar Oficial') {
-        oficial.innerHTML = `<h4>Dolar Oficial</h4><p>Compra: ${item.casa.compra} | Venta: ${item.casa.venta}</p>`;
+        const compra = parseFloat(item.casa.compra).toFixed(2);
+        const venta = parseFloat(item.casa.venta).toFixed(2);
+        oficial.innerHTML = `<h4>Dolar Oficial</h4><p>Compra: ${compra} | Venta: ${venta}</p>`;
       } else if (item.casa.nombre === 'Dolar Blue') {
-        blue.innerHTML = `<h4>Dolar Blue</h4><p>Compra: ${item.casa.compra} | Venta: ${item.casa.venta}</p>`;
+        const compra = parseFloat(item.casa.compra).toFixed(2);
+        const venta = parseFloat(item.casa.venta).toFixed(2);
+        blue.innerHTML = `<h4>Dolar Blue</h4><p>Compra: ${compra} | Venta: ${venta}</p>`;
       } else if (item.casa.nombre === 'Dolar Bolsa') {
-        bolsa.innerHTML = `<h4>Dolar Bolsa</h4><p>Compra: ${item.casa.compra} | Venta: ${item.casa.venta}</p>`;
+        const compra = parseFloat(item.casa.compra).toFixed(2);
+        const venta = parseFloat(item.casa.venta).toFixed(2);
+        bolsa.innerHTML = `<h4>Dolar Bolsa</h4><p>Compra: ${compra} | Venta: ${venta}</p>`;
       }
     });
   })
