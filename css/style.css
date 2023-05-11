@@ -318,6 +318,10 @@ body{
                              "pie pie pie pie";
     }
 
+    #hcarrusel{
+        height: 300px;
+    }
+
     .side h4{
         font-size: 1rem;
     }
@@ -361,6 +365,10 @@ body{
     .navegador li{
         width: 100%;
         margin-top: 1px;
+    }
+
+    #hcarrusel{
+        height: 300px;
     }
     /* ------------------------------------------------------------------------ */
     .contenedor .side{
