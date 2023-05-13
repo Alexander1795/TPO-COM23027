@@ -50,3 +50,18 @@ fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
     });
   })
   .catch(error => console.error(error));
+
+  var cards = ``
+
+  for (let elemento of articulos){
+    var cards = cards + `
+            <div class="card">
+                <img src=${elemento.foto} alt="pc-gamer">
+                <h4>${elemento.name}</h4>
+                <p>${elemento.descripcion}</p>
+                <a href="contacto.html" target="_blank">Consulta aquí</a>
+            </div>
+    `
+  }
+
+  document.querySelector(".catalogo").innerHTML = cards;
