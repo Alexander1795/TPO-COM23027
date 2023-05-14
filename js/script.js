@@ -23,6 +23,18 @@ cerrar.addEventListener("click", () => {
 //     catalogoSection.appendChild(clonedCard);
 // }
 
+//Boton volver Arriba 
+const VolverArriba = document.querySelector(".volver-arriba")
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100){
+   VolverArriba.classList.add("visible");
+  }
+  else{
+    VolverArriba.classList.remove("visible");
+  }
+
+})
+
 
 //Consumimos api DolarSi
 fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')

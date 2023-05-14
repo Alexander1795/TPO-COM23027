@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     /* background-color: black; */
+    scroll-behavior: smooth;
 }
 body{
     background-color: #E0E4CC;
@@ -300,6 +301,30 @@ body{
 .abrir-menu.invisible {
     display: none;
 }
+/* Boton volver arriba */
+.volver-arriba {
+    background: #ffde00;
+    color: #000000;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+.volver-arriba.visible{
+    opacity: 1;
+    bottom: 32px;
+    pointer-events: auto;
+}
 
 @media screen and (max-width: 768px){
     .contenedor{
@@ -347,6 +372,9 @@ body{
 
     .navegador.visible {
         display: block;
+    }
+    .volver-arriba.visible{
+        right: 12px;
     }
 }
 
@@ -419,6 +447,11 @@ body{
 
     .navegador.visible {
         display: block;
+    }
+    /* Boton Volver Arriba */
+    .volver-arriba.visible{
+        bottom: 16px;
+        right: 16px;
     }
 }
 
