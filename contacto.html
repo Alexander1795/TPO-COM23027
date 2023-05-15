@@ -18,130 +18,70 @@
         <header class="encabezado"> </header>
         <header class="gradiante"> </header>
 
-        <section class="carrusel">
-            <div class="formulario">
-                <h2>Formulario de Contacto</h2> <br><br>
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="Nombre..." required>
-                        <div class="valid-feedback">
-                            Genial!
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label">Apellido:</label>
-                        <input type="text" class="form-control" id="validationCustom02" value="Apellido.." required>
-                        <div class="valid-feedback">
-                            Genial!
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label">Email:</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="validationCustomUsername"
-                                aria-describedby="inputGroupPrepend" required>
-                            <div class="invalid-feedback">
-                                Por favor, Elija un nombre de usuario.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">Provincia: </label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Elija Una Provincia</option>
-                            <option>Buenos Aires</option>
-                            <option>Catamarca</option>
-                            <option>Chaco</option>
-                            <option>CABA</option>
-                            <option>Córdoba</option>
-                            <option>Corrientes</option>
-                            <option>Entre Ríos</option>
-                            <option>Formosa</option>
-                            <option>Jujuy</option>
-                            <option>La Pampa</option>
-                            <option>Mendoza</option>
-                            <option>Misiones</option>
-                            <option>Santa Fe</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Por Favor, Seleccionar Una Provincia
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">Ciudad:</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Por favor, Ingrese una Ciudad.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom05" class="form-label">Codigo Postal:</label>
-                        <input type="number" class="form-control" id="validationCustom05" required>
-                        <div class="invalid-feedback">
-                            Por Favor, Ingresar Un Codigo Postal
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">Asunto: </label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Elija Una Categoria</option>
-                            <option>Compra</option>
-                            <option>Consulta de Stock</option>
-                            <option>Consulta de Precios</option>
-                            <option>Garantia</option>
-                            <option>Soporte Tecnico</option>
-                            <option>Venta Mayorista</option>
-                            <option>Otros.</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Por Favor, Elija una Categoria
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">Categoria de Producto: </label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Elija Una Categoria</option>
-                            <option>Auriculares</option>
-                            <option>CPU</option>
-                            <option>Componentes de PC</option>
-                            <option>Monitores</option>
-                            <option>Otros.</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Por Favor, Elija una Categoria
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="message">Tu Mensaje:</label>
-                        <textarea name="message" required></textarea>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Acepto los términos y condiciones.
-                            </label>
-                            <div class="invalid-feedback">
-                                Debe estar de acuerdo antes de enviar.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Enviar Formulario</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+        <div class="carrusel"> 
+            <h2>Formulario de Contacto</h2>
+            <br>
+            <form action="" name="formulario" method="get">
+                <label for="">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Ingrese su Nombre" class="input">
+                <label for="">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Ingrese su Apellido" class="input">
+                <label for="">Email:</label>
+                <input type="email" name="email" id="email" maxlength="30" placeholder="Ingrese su Email" class="input">
+                <label for="">Ciudad:</label>
+                <input type="text" name="ciudad" id="ciudad" maxlength="30" placeholder="Ingrese su Ciudad" class="input">
+                <br><br>
+                <label for="">Seleccione su provincia:</label>
+                <select class="select" id="provincia" required="">
+                    <option selected="" disabled="" value="">Elija Una Provincia</option>
+                    <option>Buenos Aires</option>
+                    <option>Catamarca</option>
+                    <option>Chaco</option>
+                    <option>CABA</option>
+                    <option>Córdoba</option>
+                    <option>Corrientes</option>
+                    <option>Entre Ríos</option>
+                    <option>Formosa</option>
+                    <option>Jujuy</option>
+                    <option>La Pampa</option>
+                    <option>Mendoza</option>
+                    <option>Misiones</option>
+                    <option>Santa Fe</option>
+                </select>
+                <label for="">Codigo Postal:</label>
+                <input type="number" name="cp" id="cp" placeholder="Ingrese su C.P." class="input">
+                <label for="">Seleccione categoria del Producto:</label>
+                <select class="select" id="categoria" required="">
+                    <option selected="" disabled="" value="">Elija Una Categoria</option>
+                    <option>Auriculares</option>
+                    <option>CPU</option>
+                    <option>Componentes de PC</option>
+                    <option>Monitores</option>
+                    <option>Otros.</option>
+                </select>
+                <br><br>
+                <label for="">Asunto:</label>
+                <input type="radio" name="asunto" value="Compra"> Compra
+                <input type="radio" name="asunto" value="Consulta de Stock"> Consulta de Stock
+                <input type="radio" name="asunto" value="Garantia"> Garantia
+                <input type="radio" name="asunto" value="Soporte Técnico"> Soporte Técnico
+                <input type="radio" name="asunto" value="Venta Mayorista"> Venta Mayorista
+                <input type="radio" name="asunto" value="Otros..."> Otros...
+                <br><br>
+                <textarea name="textarea" placeholder="Escriba aqui su consulta Max: 350 caracteres" maxlength="350"></textarea>
+                <br><br>
+                <input type="checkbox" name="terminos" id="terminos"> Acepto los Términos y Condiciones
+                <div class="centrado">
+                    <input type="submit" id="b1" name="btn" value="Enviar">
+                </div>
+            </form>
+        </div>
 
         <footer class="pie"> </footer>
     </div>
 
 
+    <script src="./js/validacion.js"></script>
     <script src="./js/etiquetas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
