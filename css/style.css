@@ -42,6 +42,22 @@ body{
                          "pie pie pie pie";
 }
 
+.contenedor-contacto{ /* Mquetado contacto.html */
+    width: 95%;
+    max-width: 1500px;
+    margin: 15px auto;
+    display: grid;
+    gap: 15px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+                         "navegador navegador navegador navegador"
+                         "contacto contacto contacto contacto"
+                         "pie pie pie pie";
+}
+
 .contenedor .encabezado,
 .contenedor .navegador,
 .contenedor .side,
@@ -50,13 +66,18 @@ body{
 .contenedor-catalogo .encabezado,
 .contenedor-catalogo .navegador,
 .contenedor-catalogo .catalogo,
-.contenedor-catalogo .pie{
+.contenedor-catalogo .pie
+.contenedor-contacto .encabezado,
+.contenedor-contacto .navegador,
+.contenedor-contacto .contacto,
+.contenedor-contacto .pie{
     padding: 20px;
     border-radius: 4px;
 }
 
 .contenedor .encabezado,
-.contenedor-catalogo .encabezado{
+.contenedor-catalogo .encabezado,
+.contenedor-contacto .encabezado{
     background: #ffde00;
     grid-area: encabezado;
     text-align: center;
@@ -82,7 +103,8 @@ body{
 }
 
 .contenedor .navegador,
-.contenedor-catalogo .navegador{
+.contenedor-catalogo .navegador,
+.contenedor-contacto .navegador{
     /* background: darkblue; */
     color: #fff;
     grid-area: navegador;
@@ -188,7 +210,7 @@ body{
 
 .side div{
     background: #ffde00;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     height: 30%;
     margin-bottom: 10px;
@@ -201,7 +223,8 @@ body{
 
 
 .contenedor .pie,
-.contenedor-catalogo .pie{
+.contenedor-catalogo .pie,
+.contenedor-contacto .pie{
     background: #ffde00;
     color: #000000;
     grid-area: pie;
@@ -223,6 +246,22 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
+}
+
+.contenedor-contacto .contacto{
+    /* background-color: navy; */
+    grid-area: contacto;
+    /* height: 25rem; */
+    height: 100%;
+    color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: justify;
+    justify-items: justify;
+    align-items: center;
+    text-align: left;
     padding: 0;
 }
 
@@ -327,42 +366,51 @@ body{
     pointer-events: auto;
 }
 
-@media screen and (max-width: 768px){
-    .contenedor{
+@media screen and (max-width: 768px) {
+    .contenedor {
         width: 100%;
         grid-template-areas: "encabezado encabezado encabezado encabezado"
-                             "navegador navegador navegador navegador"
-                             "side side side side"
-                             "carrusel carrusel carrusel carrusel"
-                             "pie pie pie pie";
+            "navegador navegador navegador navegador"
+            "side side side side"
+            "carrusel carrusel carrusel carrusel"
+            "pie pie pie pie";
     }
 
-    .contenedor-catalogo{
+    .contenedor-catalogo {
         width: 100%;
         grid-template-areas: "encabezado encabezado encabezado encabezado"
-                             "navegador navegador navegador navegador"
-                             "catalogo catalogo catalogo catalogo"
-                             "pie pie pie pie";
+            "navegador navegador navegador navegador"
+            "catalogo catalogo catalogo catalogo"
+            "pie pie pie pie";
     }
 
-    #hcarrusel{
+    .contenedor-contacto {
+        width: 100%;
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "navegador navegador navegador navegador"
+            "contacto contacto contacto contacto"
+            "pie pie pie pie";
+    }
+
+    #hcarrusel {
         height: 275px;
     }
 
-    .catalogo .card{
+    .catalogo .card {
         width: 40%;
     }
 
-    .side h4{
+    .side h4 {
         font-size: 1rem;
     }
 
-    .navegador li{
+    .navegador li {
         width: 100%;
         margin-top: 1px;
     }
+
     /* Menu hamburguesa */
-    .navegador{
+    .navegador {
         display: none;
     }
 
@@ -374,50 +422,76 @@ body{
     .navegador.visible {
         display: block;
     }
-    .volver-arriba.visible{
+
+    .volver-arriba.visible {
         right: 12px;
+    }
+
+    /* Formulario */
+
+    .contacto form {
+        display: inline-block;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 95%;
+        align-items: center;
+    }
+
+    .contacto input {
+        width: 95%;
     }
 }
 
-@media screen and (max-width: 450px){
-    .contenedor{
+@media screen and (max-width: 450px) {
+    .contenedor {
         width: 100%;
         grid-template-areas: "encabezado encabezado encabezado encabezado"
-                             "navegador navegador navegador navegador"
-                             "carrusel carrusel carrusel carrusel"
-                             "side side side side"
-                             "pie pie pie pie";
+            "navegador navegador navegador navegador"
+            "carrusel carrusel carrusel carrusel"
+            "side side side side"
+            "pie pie pie pie";
     }
 
-    .contenedor-catalogo{
+    .contenedor-catalogo {
         width: 100%;
         grid-template-areas: "encabezado encabezado encabezado encabezado"
-                             "navegador navegador navegador navegador"
-                             "catalogo catalogo catalogo catalogo"
-                             "pie pie pie pie";
+            "navegador navegador navegador navegador"
+            "catalogo catalogo catalogo catalogo"
+            "pie pie pie pie";
     }
-    .navegador li{
+
+    .contenedor-contacto {
+        width: 100%;
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "navegador navegador navegador navegador"
+            "contacto contacto contacto contacto"
+            "pie pie pie pie";
+
+    }
+
+    .navegador li {
         width: 100%;
         margin-top: 1px;
     }
 
-    #hcarrusel{
+    #hcarrusel {
         height: 275px;
     }
+
     /* ------------------------------------------------------------------------ */
-    .contenedor .side{
+    .contenedor .side {
         /* background: #ffde00; */
         color: #000000;
-        grid-area: side; 
+        grid-area: side;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         box-sizing: border-box;
     }
-    
-    .side div{
-        border: 1px solid black;
+
+    .side div {
+        /* border: 1px solid black; */
         width: 100%;
         height: 80%;
         border-radius: 10px;
@@ -427,20 +501,21 @@ body{
         box-sizing: content-box;
     }
 
-    .catalogo .card{
-    width: 60%;
+    .catalogo .card {
+        width: 60%;
     }
 
     /* ------------------------------------------------------------------------ */
 
-    .side h4{
+    .side h4 {
         font-size: 1rem;
     }
+
     /* Menu hamburguesa */
-    .navegador{
+    .navegador {
         display: none;
     }
-    
+
     .abrir-menu,
     .cerrar-menu {
         display: block;
@@ -449,22 +524,38 @@ body{
     .navegador.visible {
         display: block;
     }
+
     /* Boton Volver Arriba */
-    .volver-arriba.visible{
+    .volver-arriba.visible {
         bottom: 16px;
         right: 16px;
     }
+
+    /* Formulario */
+
+    .contacto form {
+        display: inline-block;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 95%;
+        align-items: center;
+    }
+
+    .contacto input {
+        width: 95%;
+    }
+
 }
 
 /* Formulario */
 
-
-.carrusel h2{
+.contacto h2 {
     text-align: center;
     object-fit: cover;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
 
 }
+
 textarea {
     border: 1px solid #000000;
     border-radius: 4px;
@@ -474,10 +565,11 @@ textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-.input{
+.input {
     padding: 0.375rem 2.25rem 0.375rem 0.75rem;
 }
-.select{
+
+.select {
     /* display: block; */
     padding: 0.375rem 2.25rem 0.375rem 0.75rem;
     -moz-padding-start: calc(0.75rem - 3px);
@@ -491,15 +583,21 @@ textarea {
     border: 1px solid #000000;
     border-radius: 0.375rem;
     transition: 0.15s ease-in-out, 0.15s ease-in-out;
-    
+
 }
-input{
+
+input {
     border: 1px solid black;
     border-radius: 5px;
-    
+
 }
-.centrado{text-align:center;}
-.boton, #b1 {
+
+.centrado {
+    text-align: center;
+}
+
+.boton,
+#b1 {
     background-color: #ffde00;
     padding: 5px;
 }

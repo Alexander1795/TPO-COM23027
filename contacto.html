@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="contenedor">
+    <div class="contenedor-contacto">
         <header class="encabezado"> </header>
         <header class="gradiante"> </header>
 
-        <div class="carrusel" id="formulario"> 
+        <section class="contacto"> 
             <h2>Formulario de Contacto</h2>
             <br>
             <form action="" name="formulario" method="get">
@@ -58,14 +58,15 @@
                     <option>Monitores</option>
                     <option>Otros.</option>
                 </select>
+                <br>
+                <label for="asunto">Asunto:</label><br>
+                Compra <input type="radio" name="asunto" value="Compra">
+                Consulta de Stock <input type="radio" name="asunto" value="Consulta de Stock"> 
+                Garantia <input type="radio" name="asunto" value="Garantia">
+                Soporte Técnico <input type="radio" name="asunto" value="Soporte Técnico">
+                Venta Mayorista <input type="radio" name="asunto" value="Venta Mayorista"> 
+                Otros... <input type="radio" name="asunto" value="Otros...">
                 <br><br>
-                <label for="asunto">Asunto:</label>
-                <input type="radio" name="asunto" value="Compra">Compra
-                <input type="radio" name="asunto" value="Consulta de Stock"> Consulta de Stock
-                <input type="radio" name="asunto" value="Garantia"> Garantia
-                <input type="radio" name="asunto" value="Soporte Técnico"> Soporte Técnico
-                <input type="radio" name="asunto" value="Venta Mayorista"> Venta Mayorista
-                <input type="radio" name="asunto" value="Otros...">Otros...
                 <textarea name="textarea" placeholder="Escriba aqui su consulta Max: 350 caracteres" maxlength="350"></textarea>
                 <br><br>
                 <input type="checkbox" name="terminos" id="terminos">
@@ -74,7 +75,7 @@
                 <input type="submit" id="b1" name="btn" value="Enviar">
                 </div>
             </form>
-        </div>
+        </section>
 
         <footer class="pie"> </footer>
     </div>
