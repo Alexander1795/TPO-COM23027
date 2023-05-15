@@ -176,7 +176,7 @@ body{
   }
 
 .contenedor .side{
-    background: #ffde00;
+    /* background: #ffde00; */
     color: #000000;
     grid-area: side; 
     display: inline-block;
@@ -187,6 +187,7 @@ body{
 }
 
 .side div{
+    background: #ffde00;
     border: 1px solid black;
     width: 100%;
     height: 30%;
@@ -405,7 +406,7 @@ body{
     }
     /* ------------------------------------------------------------------------ */
     .contenedor .side{
-        background: #ffde00;
+        /* background: #ffde00; */
         color: #000000;
         grid-area: side; 
         display: inline-flex;
@@ -456,6 +457,7 @@ body{
 }
 
 /* Formulario */
+
 
 .carrusel h2{
     text-align: center;
