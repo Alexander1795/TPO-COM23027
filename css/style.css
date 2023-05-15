@@ -258,10 +258,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: justify;
-    justify-items: justify;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     padding: 0;
 }
 
