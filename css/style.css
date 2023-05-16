@@ -196,6 +196,11 @@ body{
 .carousel-item img {
     height: 100%; /* aseguramos que todos los elementos del carrusel tengan una altura de 100% */
   }
+  .carousel-item{
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+} 
 
 .contenedor .side{
     /* background: #ffde00; */
