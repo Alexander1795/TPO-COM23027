@@ -58,6 +58,24 @@ body{
                          "pie pie pie pie";
 }
 
+.contenedor-nosotros {
+    /* Mquetado nosotros.html */
+    width: 95%;
+    max-width: 1500px;
+    margin: 15px auto;
+    display: grid;
+    gap: 15px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "navegador navegador navegador navegador"
+        "nosotros nosotros nosotros nosotros"
+        "contenido contenido contenido contenido"
+        "pie pie pie pie";
+}
+
 .contenedor .encabezado,
 .contenedor .navegador,
 .contenedor .side,
@@ -70,14 +88,20 @@ body{
 .contenedor-contacto .encabezado,
 .contenedor-contacto .navegador,
 .contenedor-contacto .contacto,
-.contenedor-contacto .pie{
+.contenedor-contacto .pie,
+.contenedor-nosotros .encabezado,
+.contenedor-nosotros .navegador,
+.contenedor-nosotros .nosotros,
+.contenedor-nosotros .contenido,
+.contenedor-nosotros .pie {
     padding: 20px;
     border-radius: 4px;
 }
 
 .contenedor .encabezado,
 .contenedor-catalogo .encabezado,
-.contenedor-contacto .encabezado{
+.contenedor-contacto .encabezado,
+.contenedor-nosotros .encabezado {
     background: #ffde00;
     grid-area: encabezado;
     text-align: center;
@@ -88,7 +112,8 @@ body{
 }
 .contenedor .gradiante,
 .contenedor-catalogo .gradiante,
-.contenedor-contacto .gradiante{
+.contenedor-contacto .gradiante,
+.contenedor-nosotros .gradiante {
     /* background: darkblue; */
     color: #fff;
     grid-area: navegador;
@@ -104,7 +129,8 @@ body{
 
 .contenedor .navegador,
 .contenedor-catalogo .navegador,
-.contenedor-contacto .navegador{
+.contenedor-contacto .navegador,
+.contenedor-nosotros .navegador {
     /* background: darkblue; */
     color: #fff;
     grid-area: navegador;
@@ -229,7 +255,8 @@ body{
 
 .contenedor .pie,
 .contenedor-catalogo .pie,
-.contenedor-contacto .pie{
+.contenedor-contacto .pie,
+.contenedor-nosotros .pie{
     background: #ffde00;
     color: #000000;
     grid-area: pie;
@@ -243,6 +270,24 @@ body{
     /* background-color: navy; */
     grid-area: catalogo;
     /* height: 25rem; */
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.contenedor-nosotros .nosotros {
+    grid-area: nosotros;
+}
+
+.contenedor-nosotros .contenido {
+    /* background-color: navy; */
+    grid-area: contenido;
     height: 100%;
     color: #fff;
     display: flex;
@@ -325,6 +370,54 @@ body{
     text-decoration: none;
     color: darkcyan;
 }
+
+/* Cards Alumnos */
+
+.contenido .card {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    width: 20%;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.contenido .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenido .card img {
+    width: 100%;
+    height: 50%;
+}
+
+.contenido .card h4 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.contenido .card p {
+    padding: 0 1rem;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.contenido .card a {
+    font-weight: 700;
+    text-decoration: none;
+    color: darkcyan;
+}
+
 /* Menu hamburguesa */
 
 .abrir-menu,
@@ -397,6 +490,15 @@ body{
             "pie pie pie pie";
     }
 
+    .contenedor-nosotros {
+        width: 100%;
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "navegador navegador navegador navegador"
+            "nosotros nosotros nosotros nosotros"
+            "contenido contenido contenido contenido"
+            "pie pie pie pie";
+    }
+
     #hcarrusel {
         height: 275px;
     }
@@ -451,6 +553,11 @@ body{
         width: 95%;
         text-align: center;
     }
+
+    /* Nosotros */
+    .contenido .card {
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -478,6 +585,15 @@ body{
             "contacto contacto contacto contacto"
             "pie pie pie pie";
 
+    }
+
+    .contenedor-nosotros {
+        width: 100%;
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "navegador navegador navegador navegador"
+            "nosotros nosotros nosotros nosotros"
+            "contenido contenido contenido"
+            "pie pie pie pie";
     }
 
     .navegador li {
@@ -513,6 +629,11 @@ body{
     }
 
     .catalogo .card {
+        width: 60%;
+    }
+
+    /* Nosotros */
+    .contenido .card {
         width: 60%;
     }
 
@@ -617,5 +738,14 @@ input {
 #b1 {
     background-color: #ffde00;
     padding: 5px;
+}
+
+/*  Nosotros */
+
+.nosotros h2 {
+    text-align: center;
+    object-fit: cover;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+
 }
 

@@ -11,7 +11,7 @@ let headerNav = `
                     <ul class="menu">
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="catalogo.html">Catalogo</a></li>
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
